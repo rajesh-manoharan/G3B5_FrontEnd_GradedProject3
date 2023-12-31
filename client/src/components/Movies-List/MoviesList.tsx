@@ -16,9 +16,6 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
     const [loading, setLoading] = useState(false);
 
     let filteredList:IMovie[] = [];
-
-    console.log('Before', filteredList)
-    console.log('search', search)
     const filteredMovie = () => {
         movies.forEach( (movie) => {
             const movieLower = movie.title.toLowerCase();
