@@ -6,12 +6,36 @@ import MovieItem from "./MovieItem";
 
 type Props = {
     listType: string,
-    showFavourite: boolean
+    showFavourite: boolean,
+    search: string
 }
-const MoviesList = ({ listType, showFavourite }: Props) => {
+const MoviesList = ({ listType, showFavourite, search}: Props) => {
+    
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState(false);
+
+    let filteredList:IMovie[] = [];
+
+    console.log('Before', filteredList)
+    console.log('search', search)
+    const filteredMovie = () => {
+        movies.forEach( (movie) => {
+            const movieLower = movie.title.toLowerCase();
+            const searchLower = search.toLowerCase();
+
+            if (movieLower.search(searchLower) !== -1) {
+                console.log(movie.title);
+                filteredList.push(movie);
+            }
+        })
+        console.log(search)
+        console.log(filteredList);
+        return filteredList;
+    }
+
+    filteredMovie();
+
 
     useEffect(() => {
         const helper = async () => {
@@ -33,7 +57,7 @@ const MoviesList = ({ listType, showFavourite }: Props) => {
             {
                 loading && (
                     <Spinner animation="border" role="status">
-                        <span className="visually-hidden">Loading...</span>
+                        <span>Loading...</span>
                     </Spinner>
                 )
             }
@@ -55,11 +79,23 @@ const MoviesList = ({ listType, showFavourite }: Props) => {
                         }
                         <Row xs={1} md={3} lg={6}>
                             {
+                                (search === '') ? (
                                 movies.map(
-                                    (movie) =>
+                                    (movie) => (
                                         <Col key={movie.id} className="col-md-2 d-flex align-items-stretch">
                                             <MovieItem movie={movie} showFavourite={showFavourite} />
                                         </Col>
+                                    )
+                                )
+                                ):
+                                ( 
+                                    filteredList.map(
+                                        (movie) => (
+                                            <Col key={movie.id} className="col-md-2 d-flex align-items-stretch">
+                                                <MovieItem movie={movie} showFavourite={showFavourite} />
+                                            </Col>
+                                        )
+                                    ) 
                                 )
                             }
                         </Row>
