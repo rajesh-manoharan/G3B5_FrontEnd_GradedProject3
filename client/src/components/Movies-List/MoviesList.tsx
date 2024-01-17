@@ -43,7 +43,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
             setLoading(false);
         }
         helper()
-    }, [listType,movies]
+    }, [listType]
     )
 
     return (
