@@ -109,7 +109,7 @@
         "Jennifer Jason Leigh",
         "Natalie Portman"
       ],
-      "imdbRating": "",
+      "imdbRating": "9",
       "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2Mjc2NzYxNl5BMl5BanBnXkFtZTgwMTA2OTA1NDM@._V1_SY500_CR0,0,320,500_AL_.jpg"
     },
     {
@@ -35118,60 +35118,60 @@
       "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYWMxYWVjNzAtMTY0YS00YWQyLWExMGItMjUxODkwYzQyNzMwXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_SY500_CR0,0,328,500_AL_.jpg"
     },
     {
-      "id": "96",
-      "title": "Black Panther",
-      "year": "2018",
+      "id": "374",
+      "title": "Saala Khadoos",
+      "year": "2016",
       "genres": [
         "Action",
-        "Adventure",
-        "Sci-Fi"
+        "Drama",
+        "Sport"
       ],
       "ratings": [
-        4,
-        1,
-        9,
-        6,
+        2,
+        3,
+        7,
+        2,
+        7,
+        2,
         2,
         10,
-        6,
-        5,
         1,
+        2,
         7,
-        4,
-        5,
         6,
-        5,
+        4,
+        2,
+        2,
+        1,
         6,
         3,
+        4,
+        2,
+        2,
+        2,
+        3,
+        5,
+        7,
         10,
-        10,
+        7,
         8,
-        2,
-        5,
         3,
-        4,
-        6,
-        6,
-        7,
-        9,
-        4,
-        4,
-        9
+        10
       ],
-      "poster": "MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "contentRating": "15",
-      "duration": "PT134M",
-      "releaseDate": "2018-02-14",
+      "poster": "MV5BM2Q5YmM3YjMtOTE2Mi00MDg5LThkZjctYzUxOWU2ZTM1ZDk4XkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_SY334_SX250_AL_.jpg",
+      "contentRating": "",
+      "duration": "PT109M",
+      "releaseDate": "2016-01-29",
       "averageRating": 0,
       "originalTitle": "",
-      "storyline": "After the events of Captain America: Civil War, King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne from factions within his own country. When two foes conspire to destroy Wakanda, the hero known as Black Panther must team up with C.I.A. agent Everett K. Ross and members of the Dora Milaje, Wakandan special forces, to prevent Wakanda from being dragged into a world war.                Written by\nEditor",
+      "storyline": "An under-fire boxing coach, Prabhu is transferred from Hisar in Haryana to Chennai as his bosses at the Boxing Council do not like his disrespectful rule-breaking unconventional ways. In Chennai, he chances upon the raw fighting talent of Madhi, the sibling of aspiring boxer Lakshmi. He decides to put all his effort to tame Madhie and get her to shine but he is repeatedly put off by her playfulness & distrust.                Written by\nPipingHotViews",
       "actors": [
-        "Chadwick Boseman",
-        "Michael B. Jordan",
-        "Lupita Nyong'o"
+        "Madhavan",
+        "Nassar",
+        "Radha Ravi"
       ],
-      "imdbRating": 7,
-      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SY500_CR0,0,337,500_AL_.jpg"
+      "imdbRating": 7.7,
+      "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BM2Q5YmM3YjMtOTE2Mi00MDg5LThkZjctYzUxOWU2ZTM1ZDk4XkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_SY334_SX250_AL_.jpg"
     }
   ]
 }

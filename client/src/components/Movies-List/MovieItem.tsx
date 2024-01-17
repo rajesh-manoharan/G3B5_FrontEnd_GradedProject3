@@ -3,14 +3,16 @@ import IMovie from "../../models/IMovie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeartCircleMinus, faHeartCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { createNewFavourite, deleteExistingFavourite } from "../../services/movie";
+import { Link } from "react-router-dom";
 
 type Props = {
     movie: IMovie,
+    listType: string,
     showFavourite: boolean
 }
 const baseUrl = process.env.REACT_APP_API_BASE_URL;
 
-const MovieItem = ({ movie, showFavourite }: Props) => {
+const MovieItem = ({ movie, showFavourite,listType }: Props) => {
     const { poster, title } = movie;
     const handleClickFavourite = () => {
         alert(`${movie.title} is being added to favourite list`);
@@ -24,7 +26,9 @@ const MovieItem = ({ movie, showFavourite }: Props) => {
     
     return (
         <Card className="my-3">
-            <Card.Img variant="top" src={`${baseUrl}/images/${poster}`} />
+            <Link to={`/${listType}/${movie.id}`}>
+                <Card.Img variant="top" src={`${baseUrl}/images/${poster}`}/>
+            </Link>
             <Card.Body>
                 <Card.Title >
                     <div>

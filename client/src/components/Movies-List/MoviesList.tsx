@@ -80,7 +80,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
                                 movies.map(
                                     (movie) => (
                                         <Col key={movie.id} className="col-md-2 d-flex align-items-stretch">
-                                            <MovieItem movie={movie} showFavourite={showFavourite} />
+                                            <MovieItem movie={movie} showFavourite={showFavourite} listType={listType}/>
                                         </Col>
                                     )
                                 )
@@ -89,7 +89,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
                                     filteredList.map(
                                         (movie) => (
                                             <Col key={movie.id} className="col-md-2 d-flex align-items-stretch">
-                                                <MovieItem movie={movie} showFavourite={showFavourite} />
+                                                <MovieItem movie={movie} showFavourite={showFavourite} listType={listType} />
                                             </Col>
                                         )
                                     ) 

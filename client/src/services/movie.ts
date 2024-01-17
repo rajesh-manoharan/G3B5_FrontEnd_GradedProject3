@@ -9,6 +9,10 @@ const getAllMoviesByCategory = async (listType: string) => {
     return response.data as IMovie[]
 }
 
+const getMovieById = async (listType:string, id:string|number) => {
+    const response = await axios.get(`${baseUrl}/${listType}/${id}`)
+    return response.data;
+}
 
 const createNewFavourite = async (newFavouriteObj: IMovie) => {
     try {
@@ -41,4 +45,5 @@ export {
     getAllMoviesByCategory
     , createNewFavourite
     , deleteExistingFavourite
+    , getMovieById
 };
