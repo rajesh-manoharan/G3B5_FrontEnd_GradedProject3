@@ -20,7 +20,7 @@ const MovieItem = ({ movie, showFavourite,listType }: Props) => {
     }
 
     const handleClickUnFavourite = () => {
-        alert(`${movie.title} is removed from favourite list. Please refresh!!!`);
+        alert(`${movie.title} is removed from favourite list`);
         deleteExistingFavourite(movie.id);
     }
     

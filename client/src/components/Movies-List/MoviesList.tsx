@@ -22,12 +22,9 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
             const searchLower = search.toLowerCase();
 
             if (movieLower.search(searchLower) !== -1) {
-                console.log(movie.title);
                 filteredList.push(movie);
             }
         })
-        console.log(search)
-        console.log(filteredList);
         return filteredList;
     }
 
@@ -46,7 +43,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
             setLoading(false);
         }
         helper()
-    }, [listType]
+    }, [listType,movies]
     )
 
     return (
