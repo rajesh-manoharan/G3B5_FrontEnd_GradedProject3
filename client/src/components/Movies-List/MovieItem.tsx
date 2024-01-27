@@ -8,11 +8,12 @@ import { Link } from "react-router-dom";
 type Props = {
     movie: IMovie,
     listType: string,
-    showFavourite: boolean
+    showFavourite: boolean,
+    refreshFunction: () => void
 }
 const baseUrl = process.env.REACT_APP_API_BASE_URL;
 
-const MovieItem = ({ movie, showFavourite,listType }: Props) => {
+const MovieItem = ({ movie, showFavourite,listType,refreshFunction }: Props) => {
     const { poster, title } = movie;
     const handleClickFavourite = () => {
         alert(`${movie.title} is being added to favourite list`);
@@ -22,6 +23,7 @@ const MovieItem = ({ movie, showFavourite,listType }: Props) => {
     const handleClickUnFavourite = () => {
         alert(`${movie.title} is removed from favourite list`);
         deleteExistingFavourite(movie.id);
+        refreshFunction();
     }
     
     return (

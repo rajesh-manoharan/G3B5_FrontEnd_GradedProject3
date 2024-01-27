@@ -14,6 +14,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [error, setError] = useState<Error | null>(null);
     const [loading, setLoading] = useState(false);
+    const [refresh, setRefresh] = useState(false);
 
     let filteredList:IMovie[] = [];
     const filteredMovie = () => {
@@ -30,6 +31,9 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
 
     filteredMovie();
 
+    const refreshFunction = () => {
+        refresh === false ? setRefresh(true):setRefresh(false);
+    }
 
     useEffect(() => {
         const helper = async () => {
@@ -43,7 +47,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
             setLoading(false);
         }
         helper()
-    }, [listType]
+    }, [listType,refresh]
     )
 
     return (
@@ -77,7 +81,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
                                 movies.map(
                                     (movie) => (
                                         <Col key={movie.id} className="col-md-2 d-flex align-items-stretch">
-                                            <MovieItem movie={movie} showFavourite={showFavourite} listType={listType}/>
+                                            <MovieItem movie={movie} showFavourite={showFavourite} listType={listType} refreshFunction={refreshFunction}/>
                                         </Col>
                                     )
                                 )
@@ -86,7 +90,7 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
                                     filteredList.map(
                                         (movie) => (
                                             <Col key={movie.id} className="col-md-2 d-flex align-items-stretch">
-                                                <MovieItem movie={movie} showFavourite={showFavourite} listType={listType} />
+                                                <MovieItem movie={movie} showFavourite={showFavourite} listType={listType} refreshFunction={refreshFunction}/>
                                             </Col>
                                         )
                                     ) 
