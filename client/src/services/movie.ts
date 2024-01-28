@@ -36,9 +36,15 @@ const createNewFavourite = async (newFavouriteObj: IMovie) => {
 };
 
 const deleteExistingFavourite = async (deleteFavourite: string) => {
+    try {
     const response = await axios.delete(`${baseUrl}/favourite/${deleteFavourite}`)
         .then(response => { return 'Deleted successfully' });
     return response;
+    }
+    catch(_e){
+        let error:AxiosError = _e as AxiosError;
+        console.log('Already deleted!! Please refresh');
+    }
 };
 
 export {
