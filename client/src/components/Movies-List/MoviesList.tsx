@@ -32,7 +32,10 @@ const MoviesList = ({ listType, showFavourite, search}: Props) => {
     filteredMovie();
 
     const refreshFunction = () => {
-        refresh === false ? setRefresh(true):setRefresh(false);
+        if (refresh === false)
+         setRefresh(true)
+        else
+         setRefresh(false)
     }
 
     useEffect(() => {
